@@ -213,6 +213,8 @@ h3 {
   position: relative;
   transition: 0.3s;
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .img-container {
@@ -246,15 +248,36 @@ h3 {
   font-weight: 600;
 }
 
+.projeto-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.projeto-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+  width: 100%;
+}
+
 .tecnologias {
   display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
   gap: 10px;
-  margin: 10px 0;
+  min-height: 30px;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .tecnologias img {
   width: 25px;
   height: 25px;
+  flex-shrink: 0;
 }
 
 .projeto-card a {
@@ -265,18 +288,21 @@ h3 {
 }
 
 .btn-github {
-  margin-top: auto;
+  width: 100%;
+  min-height: 44px;
+  margin-top: 0;
   background-color: #0f1b61;
   color: #fff !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 10px 16px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 500;
   transition: 0.3s;
-  margin-top: 5px;
+  text-align: center;
+  align-self: stretch;
 }
 
 .btn-github:hover {
@@ -327,6 +353,12 @@ h3 {
   opacity: 0.8;
 }
 
+@media (max-width: 991px) {
+  .projeto-card {
+    border-radius: 14px;
+  }
+}
+
 @media (max-width: 768px) {
   .footer-redes {
     justify-content: center;
@@ -336,9 +368,6 @@ h3 {
   .footer-info {
     text-align: center;
   }
-}
-
-@media (max-width: 768px) {
 
   h1 {
     font-size: 32px !important;
@@ -375,5 +404,14 @@ h3 {
 
   .navbar span {
     font-size: 16px;
+  }
+
+  .tecnologias {
+    gap: 8px;
+  }
+
+  .tecnologias img {
+    width: 22px;
+    height: 22px;
   }
 }
