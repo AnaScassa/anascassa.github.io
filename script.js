@@ -41,6 +41,8 @@ function eraseAll() {
         typing2.innerHTML = h2.slice(0, -1);
         setTimeout(eraseAll, 50);
     } else {
+        typing2.classList.remove("cursor");
+        typing.classList.add("cursor");
         eraseH1();
     }
 }
@@ -52,6 +54,7 @@ function eraseH1() {
         typing.innerHTML = h1.slice(0, -1);
         setTimeout(eraseH1, 50);
     } else {
+        typing.classList.remove("cursor");
         setTimeout(typeThird, 500);
     }
 }
